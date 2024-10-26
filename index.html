@@ -3,37 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Home - Learn Skills</title>
+    <title>BlackBox Big Data</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <!-- Navbar -->
 <nav>
-    <div><strong>Learnify</strong></div>
+    <div class="logo"><span class="black">Black</span>Box Big Data</div>
     <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Courses</a>
-            <ul>
+        <li><a href="#"><span class="home-icon">🏠</span> Home</a></li>
+        <li>
+            <a href="#"><span class="book-icon">📚</span> Courses</a>
+            <ul class="dropdown">
                 <li><a href="#">Python</a></li>
                 <li><a href="#">Flink</a></li>
                 <li><a href="#">Spark</a></li>
                 <li><a href="#">Kafka</a></li>
             </ul>
         </li>
-        <li><a href="#">About Us</a></li>
     </ul>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero">
-    <div class="hero-content">
-        <h1>100% Satisfaction Guarantee</h1>
-        <p>Learn Skills From Our Top Instructors</p>
-        <a href="#" class="cta-button">Get Courses</a>
-    </div>
-    <div class="hero-image">
-        <img src="https://via.placeholder.com/300" alt="Instructor">
+<!-- Courses Section -->
+<section class="courses-section">
+    <h2>Courses Recommended for You</h2>
+    <div class="courses-container">
+        <!-- Course Card 1 -->
+        <div class="course-card">
+            <img src="https://via.placeholder.com/200" alt="Introduction to Programming">
+            <h3>Introduction to Programming</h3>
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ <span>(1338)</span>
+            </div>
+            <p>5 Months, Beginner</p>
+        </div>
+
+        <!-- Additional Course Cards -->
+        <div class="course-card">
+            <img src="https://via.placeholder.com/200" alt="Data Analyst">
+            <h3>Data Analyst</h3>
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ <span>(1232)</span>
+            </div>
+            <p>2 Months, Intermediate</p>
+        </div>
+
+        <div class="course-card">
+            <img src="https://via.placeholder.com/200" alt="Deep Learning">
+            <h3>Deep Learning</h3>
+            <div class="rating">
+                ⭐⭐⭐⭐⭐ <span>(965)</span>
+            </div>
+            <p>3 Months, Intermediate</p>
+        </div>
+
+        <!-- Add more cards as needed -->
     </div>
 </section>
 

@@ -1,63 +1,147 @@
 /* Basic Reset */
-* { margin: 0; padding: 0; box-sizing: border-box; }
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+}
 
 /* Navbar */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #4a00e0;
-    padding: 10px 20px;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
+    padding: 15px 30px;
     color: white;
+    font-size: 1.2em;
 }
+
+.logo {
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.logo .black {
+    color: #00c3ff; /* Blue color for "Black" */
+}
+
 nav ul {
     list-style-type: none;
     display: flex;
-    gap: 20px;
+    gap: 30px; /* Increase spacing between menu items */
 }
+
 nav ul li {
-    display: inline;
+    position: relative;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
-}
-nav a:hover {
-    text-decoration: underline;
-}
-
-/* Hero Section */
-.hero {
+    font-weight: bold;
+    font-size: 1em;
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 50px;
-    background: linear-gradient(135deg, #4a00e0, #8e2de2);
-    color: white;
 }
-.hero-content {
-    max-width: 50%;
-}
-.hero-content h1 {
-    font-size: 2.5em;
-    margin-bottom: 20px;
-}
-.hero-content p {
+
+.home-icon,
+.book-icon {
     font-size: 1.2em;
-    margin-bottom: 20px;
+    margin-right: 5px;
 }
-.cta-button {
-    background-color: #ff5e62;
-    color: white;
-    padding: 10px 20px;
-    text-decoration: none;
-    font-weight: bold;
+
+/* Dropdown Styling */
+.dropdown {
+    display: none; /* Hidden by default */
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #8e2de2;
+    padding: 10px;
     border-radius: 5px;
 }
-.cta-button:hover {
-    background-color: #ff826a;
+
+nav ul li:hover .dropdown {
+    display: block; /* Show dropdown on hover */
 }
-.hero-image img {
-    max-width: 100%;
+
+.dropdown li {
+    margin-bottom: 5px;
+}
+
+.dropdown li a {
+    font-size: 0.9em;
+    color: white;
+    text-decoration: none;
+}
+
+.dropdown li a:hover {
+    color: #ff5e62;
+}
+
+/* Courses Section */
+.courses-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.courses-section h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+/* Course Cards Container */
+.courses-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+/* Individual Course Card */
+.course-card {
+    background-color: #2c2c54;
+    color: white;
     border-radius: 10px;
+    width: 180px;
+    padding: 15px;
+    text-align: left;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.course-card img {
+    width: 100%;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.course-card h3 {
+    font-size: 1.1em;
+    margin-bottom: 5px;
+}
+
+.rating {
+    font-size: 0.9em;
+    margin: 5px 0;
+    color: #ffd700; /* Gold color for stars */
+}
+
+.rating span {
+    color: #ddd;
+    margin-left: 5px;
+}
+
+.course-card p {
+    font-size: 0.85em;
+    color: #b0c4de; /* Light blue for course details */
 }
