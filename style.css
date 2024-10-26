@@ -1,31 +1,63 @@
-body {
-    font-family: Arial, sans-serif;
-    line-height: 1.6;
-    margin: 0;
-    padding: 0;
-}
+/* Basic Reset */
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
-header {
-    background-color: #333;
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4a00e0;
+    padding: 10px 20px;
     color: white;
-    padding: 1em;
-    text-align: center;
 }
-
-nav a {
+nav ul {
+    list-style-type: none;
+    display: flex;
+    gap: 20px;
+}
+nav ul li {
+    display: inline;
+}
+nav ul li a {
     color: white;
-    margin: 0 15px;
     text-decoration: none;
 }
-
-section {
-    padding: 2em;
-    margin: 10px;
+nav a:hover {
+    text-decoration: underline;
 }
 
-footer {
-    background-color: #333;
+/* Hero Section */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 50px;
+    background: linear-gradient(135deg, #4a00e0, #8e2de2);
     color: white;
-    text-align: center;
-    padding: 1em;
+}
+.hero-content {
+    max-width: 50%;
+}
+.hero-content h1 {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+}
+.hero-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+.cta-button {
+    background-color: #ff5e62;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+}
+.cta-button:hover {
+    background-color: #ff826a;
+}
+.hero-image img {
+    max-width: 100%;
+    border-radius: 10px;
 }
