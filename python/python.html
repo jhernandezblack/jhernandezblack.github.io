@@ -1,18 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Python Page</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <div class="container">
         <!-- Left Sidebar -->
         <aside class="sidebar">
-            <div class="sidebar-header">Python Tips</div>
+            <div class="sidebar-header">Python</div>
             <ul class="sidebar-menu">
-                <li><a href="#">1. *args and **kwargs</a></li>
+                <li><a href="#">1. *args and **kwargs</a>
+                    <ul class="sub-menu">
+                        <li><a href="#" data-content="args-usage">1.1 Usage of *args</a></li>
+                        <li><a href="#" data-content="kwargs-usage">1.2 Usage of **kwargs</a></li>
+                    </ul>
+                </li>
                 <li><a href="#">2. Debugging</a></li>
                 <li><a href="#">3. Generators</a></li>
                 <li><a href="#">4. Map, Filter and Reduce</a></li>
@@ -29,7 +36,7 @@
         <main class="content">
             <h1>1. *args and **kwargs</h1>
             <p>
-                I have come to see that most new Python programmers have a hard time figuring out the 
+                I have come to see that most new Python programmers have a hard time figuring out the
                 <strong>*args</strong> and <strong>**kwargs</strong> magic variables.
             </p>
             <h2>1.1 Usage of *args</h2>
@@ -46,5 +53,62 @@ test_var_args('yasoob', 'python', 'eggs', 'test')</code>
             </pre>
         </main>
     </div>
+    <!-- JavaScript -->
+    <script>
+        // Toggle Sub-Menu Visibility
+        document.querySelectorAll('.toggle').forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                const subMenu = this.nextElementSibling;
+                subMenu.classList.toggle('show');
+            });
+        });
+
+        // Display Content in Main Section
+        const contentData = {
+            "args-usage": `
+                <h1>1.1 Usage of *args</h1>
+                <p>*args is used to pass a non-keyworded variable-length argument list to a function.</p>
+                <pre><code>def test_var_args(f_arg, *argv):
+    print("First normal arg:", f_arg)
+    for arg in argv:
+        print("Another arg through *argv:", arg)</code></pre>
+            `,
+            "kwargs-usage": `
+                <h1>1.2 Usage of **kwargs</h1>
+                <p>**kwargs allows you to pass keyworded variable-length arguments to a function.</p>
+                <pre><code>def print_kwargs(**kwargs):
+    for key, value in kwargs.items():
+        print(f"{key} = {value}")</code></pre>
+            `,
+            "debugging": `
+                <h1>2. Debugging</h1>
+                <p>Debugging in Python involves using tools like print statements, logging, and debuggers (e.g., pdb).</p>
+            `,
+            "generators": `
+                <h1>3. Generators</h1>
+                <p>Generators allow you to iterate over values one at a time using the 'yield' keyword.</p>
+            `,
+            "map-filter-reduce": `
+                <h1>4. Map, Filter, and Reduce</h1>
+                <p>These are functional programming tools to transform and reduce data in Python.</p>
+            `
+        };
+
+        document.querySelectorAll('.sub-menu a, .sidebar-menu > li > a').forEach(link => {
+            link.addEventListener('click', function (e) {
+                e.preventDefault();
+                const contentKey = this.getAttribute('data-content');
+                const mainContent = document.getElementById('main-content');
+
+                if (contentData[contentKey]) {
+                    mainContent.innerHTML = contentData[contentKey];
+                } else {
+                    mainContent.innerHTML = "<h1>Content not found</h1>";
+                }
+            });
+        });
+    </script>
 </body>
+
 </html>
