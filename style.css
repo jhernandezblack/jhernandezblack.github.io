@@ -161,9 +161,11 @@ nav ul li:hover .dropdown {
     padding: 8px 12px;
     background-color: #4a00e0; /* Match the navbar gradient color */
     color: white;
-    text-decoration: none;
+    border: none; /* Remove border */
     border-radius: 5px;
     font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
     text-align: center;
     transition: background-color 0.3s ease;
 }
