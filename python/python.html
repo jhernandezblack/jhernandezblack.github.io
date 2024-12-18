@@ -33,70 +33,69 @@
         </aside>
 
         <!-- Main Content -->
-        <main class="content">
-            <h1>1. *args and **kwargs</h1>
-            <p>
-                I have come to see that most new Python programmers have a hard time figuring out the
-                <strong>*args</strong> and <strong>**kwargs</strong> magic variables.
-            </p>
-            <h2>1.1 Usage of *args</h2>
-            <p>
-                *args allows you to pass a non-keyworded variable-length argument list to a function.
-            </p>
-            <pre class="code-block">
-<code>def test_var_args(f_arg, *argv):
-    print("first normal arg:", f_arg)
-    for arg in argv:
-        print("another arg through *argv:", arg)
-
-test_var_args('yasoob', 'python', 'eggs', 'test')</code>
-            </pre>
+        <main class="content" id="main-content">
+            <h1>Welcome to Python Tips</h1>
+            <p>Select an option from the sidebar to view content here.</p>
         </main>
     </div>
+
     <!-- JavaScript -->
     <script>
-        // Toggle Sub-Menu Visibility
+        // Toggle Submenu Visibility
         document.querySelectorAll('.toggle').forEach(item => {
-            item.addEventListener('click', function (e) {
+            item.addEventListener('click', function(e) {
                 e.preventDefault();
                 const subMenu = this.nextElementSibling;
                 subMenu.classList.toggle('show');
             });
         });
 
-        // Display Content in Main Section
+        // Content Data for Right Panel
         const contentData = {
-            "args-usage": `
+            "args-main": `
                 <h1>1.1 Usage of *args</h1>
-                <p>*args is used to pass a non-keyworded variable-length argument list to a function.</p>
-                <pre><code>def test_var_args(f_arg, *argv):
-    print("First normal arg:", f_arg)
+                <p>*args allows you to pass a non-keyworded variable-length argument list to a function.</p>
+                <pre class="code-block">
+                    <code>def test_var_args(f_arg, *argv):
+    print("first normal arg:", f_arg)
     for arg in argv:
-        print("Another arg through *argv:", arg)</code></pre>
+        print("another arg through *argv:", arg)
+
+test_var_args('yasoob', 'python', 'eggs', 'test')</code>
+                </pre>
             `,
-            "kwargs-usage": `
+            "kwargs-main": `
                 <h1>1.2 Usage of **kwargs</h1>
                 <p>**kwargs allows you to pass keyworded variable-length arguments to a function.</p>
-                <pre><code>def print_kwargs(**kwargs):
+                <pre class="code-block">
+                    <code>def test_kwargs(**kwargs):
     for key, value in kwargs.items():
-        print(f"{key} = {value}")</code></pre>
+        print(f"{key} = {value}")
+
+test_kwargs(name="Python", age=3, topic="Tips")</code>
+                </pre>
             `,
             "debugging": `
                 <h1>2. Debugging</h1>
-                <p>Debugging in Python involves using tools like print statements, logging, and debuggers (e.g., pdb).</p>
+                <p>Debugging involves identifying and fixing errors in your code. Common tools include print statements, logging, and debugging libraries like pdb.</p>
             `,
             "generators": `
                 <h1>3. Generators</h1>
-                <p>Generators allow you to iterate over values one at a time using the 'yield' keyword.</p>
-            `,
-            "map-filter-reduce": `
-                <h1>4. Map, Filter, and Reduce</h1>
-                <p>These are functional programming tools to transform and reduce data in Python.</p>
+                <p>Generators allow lazy iteration using the 'yield' keyword.</p>
+                <pre class="code-block">
+                    <code>def simple_generator():
+    for i in range(5):
+        yield i
+
+for value in simple_generator():
+    print(value)</code>
+                </pre>
             `
         };
 
+        // Update Main Content Dynamically
         document.querySelectorAll('.sub-menu a, .sidebar-menu > li > a').forEach(link => {
-            link.addEventListener('click', function (e) {
+            link.addEventListener('click', function(e) {
                 e.preventDefault();
                 const contentKey = this.getAttribute('data-content');
                 const mainContent = document.getElementById('main-content');
@@ -104,7 +103,7 @@ test_var_args('yasoob', 'python', 'eggs', 'test')</code>
                 if (contentData[contentKey]) {
                     mainContent.innerHTML = contentData[contentKey];
                 } else {
-                    mainContent.innerHTML = "<h1>Content not found</h1>";
+                    mainContent.innerHTML = "<h1>Content Not Found</h1>";
                 }
             });
         });
