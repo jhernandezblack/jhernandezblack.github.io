@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Left Sidebar -->
+        <aside class="sidebar">
+            <div class="sidebar-header">Python Tips</div>
+            <ul class="sidebar-menu">
+                <li><a href="#">1. *args and **kwargs</a></li>
+                <li><a href="#">2. Debugging</a></li>
+                <li><a href="#">3. Generators</a></li>
+                <li><a href="#">4. Map, Filter and Reduce</a></li>
+                <li><a href="#">5. set Data Structure</a></li>
+                <li><a href="#">6. Ternary Operators</a></li>
+                <li><a href="#">7. Decorators</a></li>
+                <li><a href="#">8. Global & Return</a></li>
+                <li><a href="#">9. Mutation</a></li>
+                <li><a href="#">10. __slots__ Magic</a></li>
+            </ul>
+        </aside>
+
+        <!-- Main Content -->
+        <main class="content">
+            <h1>1. *args and **kwargs</h1>
+            <p>
+                I have come to see that most new Python programmers have a hard time figuring out the 
+                <strong>*args</strong> and <strong>**kwargs</strong> magic variables.
+            </p>
+            <h2>1.1 Usage of *args</h2>
+            <p>
+                *args allows you to pass a non-keyworded variable-length argument list to a function.
+            </p>
+            <pre class="code-block">
+<code>def test_var_args(f_arg, *argv):
+    print("first normal arg:", f_arg)
+    for arg in argv:
+        print("another arg through *argv:", arg)
+
+test_var_args('yasoob', 'python', 'eggs', 'test')</code>
+            </pre>
+        </main>
+    </div>
+</body>
+</html>
