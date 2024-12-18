@@ -142,8 +142,8 @@ nav ul li:hover .dropdown {
 }
 
 .course-card img {
-    width: 200px; /* Set a fixed width */
-    height: 150px; /* Set a fixed height */
+    width: 100px; /* Set a fixed width */
+    height: 100px; /* Set a fixed height */
     object-fit: cover; /* Ensures the image maintains aspect ratio while filling the area */
     border-radius: 5px; /* Optional: Adds rounded corners for a nicer look */
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
