@@ -153,3 +153,21 @@ nav ul li:hover .dropdown {
     text-align: center; /* Ensures text aligns under the image */
     margin: 10px; /* Adds some spacing around the card */
 }
+
+/* Button Styling */
+.course-card .btn {
+    display: inline-block;
+    margin-top: 10px;
+    padding: 8px 12px;
+    background-color: #4a00e0; /* Match the navbar gradient color */
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    transition: background-color 0.3s ease;
+}
+
+.course-card .btn:hover {
+    background-color: #8e2de2; /* Lighter shade for hover */
+}
