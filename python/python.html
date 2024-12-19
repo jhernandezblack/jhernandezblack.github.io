@@ -100,7 +100,7 @@ for value in simple_generator():
                 const contentKey = this.getAttribute('data-content');
                 const mainContent = document.getElementById('main-content');
 
-                if (contentData[contentKey]) {
+                if (contentKey && contentData[contentKey]) {
                     mainContent.innerHTML = contentData[contentKey];
                 } else {
                     mainContent.innerHTML = "<h1>Content Not Found</h1>";
