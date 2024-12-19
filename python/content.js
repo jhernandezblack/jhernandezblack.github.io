@@ -5,16 +5,16 @@ function argsContent() {
     return `
         <h1>1.1 Usage of *args</h1>
         <p>*args allows you to pass a non-keyworded variable-length argument list to a function.</p>
-        <pre class="code-block">
-            <code>
-                def test_var_args(f_arg, *argv):
-                    print("first normal arg:", f_arg)
-                    for arg in argv:
-                        print("another arg through *argv:", arg)
+<pre class="code-block">
+    <code>
+        def test_var_args(f_arg, *argv):
+            print("first normal arg:", f_arg)
+            for arg in argv:
+                print("another arg through *argv:", arg)
 
-                    test_var_args('yasoob', 'python', 'eggs', 'test')
-            </code>
-        </pre>
+        test_var_args('yasoob', 'python', 'eggs', 'test')
+    </code>
+</pre>
     `;
 }
 
