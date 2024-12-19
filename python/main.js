@@ -22,3 +22,12 @@ document.querySelectorAll('.sub-menu a, .sidebar-menu > li > a').forEach(link =>
         }
     });
 });
+
+// Toggle Submenu Visibility
+document.querySelectorAll('.toggle').forEach(item => {
+    item.addEventListener('click', function (e) {
+        e.preventDefault();
+        const subMenu = this.nextElementSibling;
+        subMenu.classList.toggle('show');
+    });
+});
